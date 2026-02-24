@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamato Sapatu - Edits</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Impact', sans-serif;
+            color: white;
+            overflow-x: hidden;
+            background-color: black;
+        }
+
+        /* Vídeo de Fundo Principal */
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -2;
+        }
+
+        video.bg-video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        /* Legenda no Topo */
+        .header-text {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 3rem;
+            letter-spacing: 5px;
+            text-shadow: 4px 4px 0px #ff00ff;
+            z-index: 10;
+        }
+
+        /* Conteúdo e Botão */
+        .main-content {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-edits {
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            background: #ff00ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 0 20px #ff00ff;
+            transition: transform 0.3s;
+        }
+
+        .btn-edits:hover {
+            transform: scale(1.1);
+            background: #00ffff;
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        /* Galeria de Edits (escondida inicialmente) */
+        #gallery {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 20;
+            overflow-y: auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .edit-item {
+            margin-bottom: 40px;
+        }
+
+        .edit-item video {
+            width: 80%;
+            max-width: 600px;
+            border: 5px solid #ff00ff;
+        }
+
+        .close-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-text">YAMATO 🥿 SAPATU</div>
+
+    <div class="video-background">
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="YamatoGOZADA.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="main-content">
+        <button class="btn-edits" onclick="mostrarEdits()">VER EDITS FODAS DE SALOMÃO GOSTOZO</button>
+    </div>
+
+    <div id="gallery">
+        <button class="close-btn" onclick="fecharEdits()">X FECHAR</button>
+        <h2 style="margin-bottom: 30px;">EDITS DO SALOMÃO</h2>
+        
+        <div class="edit-item">
+            <video controls><source src="LUFFYCOMENADA.mp4" type="video/mp4"></video>
+        </div>
+        <div class="edit-item">
+            <video controls><source src="murioxhi.mp4" type="video/mp4"></video>
+        </div>
+        <div class="edit-item">
+            <video controls><source src="temachuca3.mp4" type="video/mp4"></video>
+        </div>
+        <div class="edit-item">
+            <video controls><source src="hiuronozoro.mp4" type="video/mp4"></video>
+        </div>
+        <div class="edit-item">
+            <video controls><source src="bailisentandu.mp4" type="video/mp4"></video>
+        </div>
+    </div>
+
+    <script>
+        function mostrarEdits() {
+            document.getElementById('gallery').style.display = 'block';
+        }
+        function fecharEdits() {
+            document.getElementById('gallery').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
